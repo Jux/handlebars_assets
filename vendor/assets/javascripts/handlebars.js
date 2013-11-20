@@ -611,7 +611,9 @@ var __module7__ = (function(__dependency1__) {
 
       if (part === ".." || part === "." || part === "this") {
         if (dig.length > 0) { throw new Exception("Invalid path: " + original); }
-        else if (part === "..") { depth++; }
+        else if (part === "..") { 
+           // do nothing, fixes depthed helpers for Jux 
+        }
         else { this.isScoped = true; }
       }
       else { dig.push(part); }
